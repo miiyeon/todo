@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Todo from "./Todo";
 import TodoForm from "./TodoForm.jsx";
+import "./Todo.css";
 
 function TodoList() {
     //list of tasks to do

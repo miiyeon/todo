@@ -1,5 +1,17 @@
-.app-section {
-    height: 100vh;
-    width: 100%;
-    background-color: lawngreen;
+.app-section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 520px;
+    min-height: 600px;
+    background: #e76fab;
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
 }

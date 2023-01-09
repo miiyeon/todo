@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import "./Todo.css";
 
 function TodoForm(props) {
     const [input, setInput] = useState("");
+
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        inputRef.current.focus();
+    });
 
     const handleSubmit = (e) => {
         e.preventDefault(); //for no refresh page
@@ -22,11 +29,12 @@ function TodoForm(props) {
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
-                    placeholder="Add a new task"
+                    placeholder="Add task"
                     value={input}
                     name="text"
                     className="todo-input"
                     onChange={handleChange}
+                    ref={inputRef}
                 />
                 <button className="todo-button">Add To Do</button>
             </form>
